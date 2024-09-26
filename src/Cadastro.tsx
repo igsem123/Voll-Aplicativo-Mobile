@@ -39,7 +39,8 @@ export default function Cadastro() {
                     secureTextEntry: true,
                     rightIcon: <MaterialIcons name="lock"/>
                 }
-            ]
+            ],
+            checkbox: []
         },
         {
             id: 2,
@@ -77,7 +78,8 @@ export default function Cadastro() {
                     keyboardType: 'phone-pad',
                     rightIcon: <MaterialIcons name="phone"/>
                 }
-            ]
+            ],
+            checkbox: []
         },
         {
             id: 3,
@@ -119,7 +121,7 @@ export default function Cadastro() {
 
             <Box>
                 {
-                    secoes[numSecao].entradaTexto.map(entrada => {
+                    secoes[numSecao]?.entradaTexto?.map(entrada => {
                         return <EntradaTexto label={entrada.label}
                         placeholder={entrada.placeholder} secureTextEntry={entrada.secureTextEntry}
                         keyboardType={entrada.keyboardType} rightIcon={entrada.rightIcon} key={entrada.id} />
@@ -132,9 +134,7 @@ export default function Cadastro() {
                     secoes[numSecao].checkbox.map(checkbox =>
                     {
                         return <Checkbox key={checkbox.id}
-                        value={checkbox.value}>
-
-                        </Checkbox>
+                                         value={checkbox.value} />
                     })
                 }
             </Box>
