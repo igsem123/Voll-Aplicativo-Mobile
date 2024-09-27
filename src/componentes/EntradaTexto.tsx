@@ -4,7 +4,7 @@ interface InputProps {
     label?: string;
     placeholder: string;
     secureTextEntry?: boolean;
-    keyboardType: any,
+    keyboardType?: any,
     rightIcon?: React.ReactNode;
 }
 

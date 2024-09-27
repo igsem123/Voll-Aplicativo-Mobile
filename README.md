@@ -1,8 +1,7 @@
-![Voll - Mobile](https://repository-images.githubusercontent.com/604322042/0b63dd66-5a29-4646-9c15-a9f490bb3742)
-
-# Voll #
+# 🏥 Voll - Agendamentos Médicos #
 
 Uma aplicação para consultas médicas usando Native Base e TypeScript no React Native.
+A princípio, realizado por meio do curso de React Native desenvolvido pela Alura.
 
 ## 🔨 Funcionalidades da aplicação ##
 
@@ -16,14 +15,6 @@ As tecnologias e ferramentas utilizadas nesta aplicação incluem:
 * TypeScript: linguagem de programação fortemente tipada
 * Expo: plataforma de desenvolvimento de aplicativos para React Native
 * React Native: framework para desenvolvimento de aplicativos para plataformas móveis
-
-## 🎯 Desafio ##
-
-Usar a biblioteca Native Base e TypeScript para criar uma aplicação para consultas médicas.
-
-## 📁 Acesso ao projeto ##
-
-O código fonte desta aplicação pode ser acessado em seu repositório no GitHub.
 
 ## 🛠️ Instruções para execução ##
 

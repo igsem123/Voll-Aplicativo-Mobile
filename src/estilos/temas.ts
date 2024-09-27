@@ -7,7 +7,8 @@ export const TEMAS = extendTheme({
     },
     blue: {
       500: '#339CFF',
-      800: '#0B3B60'
+      700: '#0B3B60',
+      800: '#00213D'
     },
     white: '#fff',
     black: '#000'
@@ -17,6 +18,7 @@ export const TEMAS = extendTheme({
     sm: 14,
     md: 16,
     lg: 20,
-    xl: 24
+    xl: 24,
+    xl1: 28
   }
 })
