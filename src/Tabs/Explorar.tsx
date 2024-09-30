@@ -6,14 +6,14 @@ import {CardConsulta} from "../componentes/CardConsulta";
 
 export default function Explorar() {
     return(
-        <ScrollView flex={1}>
-            <VStack p={5}>
+        <ScrollView flex={1} bg={"white"}>
+            <VStack flex={1} p={5} justifyContent={"flex-start"}>
                 <Box w={"full"} borderRadius={"lg"} p={4} shadow={1}
                      borderRightRadius={"sm"} mt={3}>
                     <EntradaTexto placeholder={'Digite a especialidade'}/>
                     <EntradaTexto placeholder={'Digite sua localização'}/>
 
-                    <Botao bgColor={'blue.700'} shadow={1} mt={4} mb={2}> Buscar </Botao>
+                    <Botao bg={"blue.700"} shadow={1} mt={4} mb={2}> Buscar </Botao>
                 </Box>
 
                 <Titulo color={'blue.500'} fontSize={'2xl'} mb={2}>Resultado da Busca</Titulo>

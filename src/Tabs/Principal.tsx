@@ -24,7 +24,7 @@ export default function Principal() {
                 <EntradaTexto placeholder={'Digite a especialidade'}/>
                 <EntradaTexto placeholder={'Digite sua localização'}/>
 
-                <Botao bgColor={'blue.700'} shadow={1} mt={4} mb={2}>
+                <Botao bg={'blue.700'} shadow={1} mt={4} mb={2}>
                     Buscar
                 </Botao>
             </Box>
