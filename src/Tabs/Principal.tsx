@@ -1,39 +1,51 @@
-import {VStack, Text, ScrollView, Image, Box} from "native-base";
+import {VStack, Text, ScrollView, Image, Box, Divider} from "native-base";
 import {Titulo} from "../componentes/Titulo";
 import Logo from '../assets/Logo.png'
 import {EntradaTexto} from "../componentes/EntradaTexto";
 import {Botao} from "../componentes/Botao";
+import {Subtitulo} from "../componentes/Subtitulo";
+import { Texto } from "../componentes/Texto";
+import {useState} from "react";
+import {depoimentos} from "../utils/mock";
 
 export default function Principal() {
+    const [numSecao] = useState(0);
     return(
-        <ScrollView flex={1} p={5}>
-            <Image source={Logo} alt={'Logo Voll'} />
-            <VStack>
-                <Titulo color={"blue.500"} textAlign={'left'} fontSize={'xl1'}>
+        <ScrollView flex={1} p={5} bgColor={"white"}>
+            <VStack flex={1} alignItems={"flex-start"} p={5}>
+                <Image source={Logo} alt={'Logo Voll'} />
+                <Titulo color={"blue.500"} fontSize={'xl1'} mt={10}>
                     Boas-vindas!
                 </Titulo>
             </VStack>
 
-            <VStack borderRadius={'lg'} p={4} mt={7} color={'white'} shadow="1" style={{
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 1 },
-                shadowOpacity: 0.2,
-                shadowRadius: 5,
-                elevation: 3.90,
-            }}>
-                <Box>
-                    <EntradaTexto placeholder={'Digite a especialidade'}/>
-                    <EntradaTexto placeholder={'Digite sua localização'}/>
-                </Box>
-                <Botao bgColor={'blue.700'}>
+            <Box w={"full"} borderRadius={"lg"} p={3} shadow={1}
+            borderRightRadius={"md"} mt={5}>
+                <EntradaTexto placeholder={'Digite a especialidade'}/>
+                <EntradaTexto placeholder={'Digite sua localização'}/>
+
+                <Botao bgColor={'blue.700'} shadow={1} mt={4} mb={2}>
                     Buscar
                 </Botao>
-            </VStack>
+            </Box>
 
-            <VStack justifyContent={'center'}>
-                <Titulo color={'blue.800'} fontSize={'xl1'}>
-                    Depoimentos
-                </Titulo>
+
+            <Titulo color={'blue.800'} fontSize={'xl'}>
+                Depoimentos
+            </Titulo>
+            <VStack justifyContent={'center'} space={3} divider={<Divider/>} w={"full"} mb={10}>
+                {
+                    depoimentos.map(depoimentos =>(
+                        <Box key={depoimentos.id} w={"full"} borderRadius={"lg"} p={3}>
+                            <Text textAlign={"justify"} color={"gray.600"} fontSize={"md"}>
+                                {depoimentos.texto}
+                            </Text>
+                            <Subtitulo>
+                                {depoimentos.subtitulo}
+                            </Subtitulo>
+                        </Box>
+                        ))
+                }
             </VStack>
         </ScrollView>
 
