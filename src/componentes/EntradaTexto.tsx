@@ -6,6 +6,8 @@ interface InputProps {
     secureTextEntry?: boolean;
     keyboardType?: any,
     rightIcon?: React.ReactNode;
+    value?: string;
+    onChangeText?: (text: string) => void;
 }
 
 export function EntradaTexto({
@@ -14,6 +16,8 @@ export function EntradaTexto({
     secureTextEntry = false,
     keyboardType,
     rightIcon,
+    value,
+    onChangeText
 } : InputProps) : JSX.Element {
     return (
         <FormControl mt={3}>
@@ -32,6 +36,8 @@ export function EntradaTexto({
                 InputRightElement={rightIcon && (
                     <Icon as={rightIcon} size={5} ml="2" color="muted.400" m={3} />
                 )}
+                value={value}
+                onChangeText={onChangeText}
             />
         </FormControl>
     );
